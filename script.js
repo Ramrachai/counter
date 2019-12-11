@@ -21,6 +21,7 @@ function decrement() {
 }
 
 function changeColor() {
+  // color change start
   var n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "a", "b", "c", "d", "e", "f"];
   color = "#";
   for (i = 0; i < 6; i++) {
@@ -32,4 +33,19 @@ function changeColor() {
   } else {
     counter.style.color = "black";
   }
+  //color change finish
+
+  //transition animation start
+
+  counter.animate(
+    [
+      //keyframe start
+      { opacity: 0.2 }, //start effect
+      { opacity: 1.0 } //finish effect
+    ], //keyframe finish
+    {
+      duration: 500,
+      fill: "forwards"
+    }
+  );
 }
